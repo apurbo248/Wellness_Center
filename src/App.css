@@ -1,0 +1,114 @@
+
+:root{
+  --mainColorLight:#c7fbcd;
+  --mainColorDark:rgb(1, 169, 84);
+  --darkColor:#222c36;
+  --lightColor:#ffffff ;
+  --fw-300:300;
+  --fw-400:400;
+  --fw-500:500;
+  --ff:'Roboto', sans-serif;
+}
+
+.sidebarMenu{
+  font-family: var(--ff);
+  z-index: 111;
+  width:250px;
+  background:var(--lightColor);
+  position: fixed;
+  height:100vh;
+  padding: 0 30px;
+  margin: 64px 0 0 0 ;
+  left: -260px;
+  border-radius: 10px;
+  transition:all .3s;
+  border-right: 1px solid var(--mainColorLight);
+}
+.sideUnderList{
+  margin-top:50px;
+  padding:0;
+  text-decoration: none;
+}
+
+ .sideList {
+  color:var(--darkColor);
+  text-decoration: none;
+  font-size:12px;
+  display: block;
+  border-radius:10px;
+  margin-top:10px;
+ 
+}
+.sideList h5{
+  font-size: 20px;
+  padding:5px 0px 5px 20px;
+  font-weight: var(--fw-500);
+
+}
+ .sideList:hover{
+   color:var(--mainColorDark);
+  background:var(--mainColorLight);
+  
+}
+#check{ 
+  display: none;
+}
+
+label #btn , label #cancel{
+  position: fixed;
+  cursor: pointer;
+  border-radius:5px;
+}
+label #btn{
+  left: 170px;
+  top: 8px;
+  font-size: 30px;
+  border-radius: 50%;
+
+}
+label #cancel{
+  z-index: 1111;
+  left: -195px;
+  top: 20px;
+  font-size: 50px;
+  color:var(--mainColorDark);
+  padding:4px 9px;
+  transition:.3s;
+}
+#check:checked ~ .sidebarMenu{
+  left: 0;
+}
+#check:checked ~ label #btn{
+  left: 150px;
+  opacity:0;
+  pointer-events:none;
+ 
+}
+#check:checked ~ label #cancel{
+  left:200px;
+}
+.heroImg{ 
+  
+ animation:zoom  5s linear infinite ;
+}
+@keyframes zoom {
+  0%{
+    transform:translateY(0px)
+  }
+  50%{
+    transform:translateY(20px)
+  }
+  100%{
+    transform:translateY(0px)
+  }
+}
+.pulse{animation: pulse 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+@keyframes pulse {
+  0%, 100% {
+    opacity: 2;
+  }
+  50% {
+    opacity: .1;
+  }
+}
