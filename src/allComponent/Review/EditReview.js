@@ -6,7 +6,7 @@ const EditReview = () => {
     const[review, setReview] = useState([]);
 
     useEffect(()=>{
-        fetch(`http://localhost:9000/get_all_review`)
+        fetch(`https://rocky-sea-29087.herokuapp.com/get_all_review`)
         .then(res => res.json())
         .then(data => {
             setReview(data);           
@@ -16,7 +16,7 @@ const EditReview = () => {
     
         //For delete...
         const deleteTeacherInfo=(id)=>{
-          fetch(`http://localhost:9000/get_all_review/${id}`,{
+          fetch(`https://rocky-sea-29087.herokuapp.com/get_all_review/${id}`,{
             method: 'DELETE'
           })
           .then(res=> res.text())

@@ -13,7 +13,7 @@ const SimpleCard = () => {
   const elements = useElements();
   const [loogedInUser, setLoggedInUser] = useContext(userContext);
   useEffect(()=>{
-    fetch(`http://localhost:9000/get_a_course/${_id}`)
+    fetch(`https://rocky-sea-29087.herokuapp.com/get_a_course/${_id}`)
     .then(res=>res.json())
     .then(data=>{
       setCourseInfo(data); 
@@ -53,7 +53,7 @@ const SimpleCard = () => {
       cardType:paymentMethod.card.brand
     }
 
-    fetch('http://localhost:9000/order',{
+    fetch('https://rocky-sea-29087.herokuapp.com/order',{
             method: 'POST',
             headers:{'Content-Type':'application/json'},
             body: JSON.stringify(makeOrder)
