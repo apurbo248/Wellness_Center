@@ -10,10 +10,10 @@ import {
 
 import { useHistory, useLocation } from "react-router";
 import { userContext } from "../../App";
-import { Button, Divider } from "rsuite";
+import { Button } from "rsuite";
 
 const Login = () => {
-  const { register, handleSubmit, errors, watch } = useForm();
+  const {  handleSubmit } = useForm();
   const [user, setUser] = useState({
     isSignedIn: false,
     name: "",

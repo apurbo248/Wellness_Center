@@ -17,7 +17,7 @@ const EditOrder = () => {
   }
 
   useEffect(()=>{
-    fetch(`https://rocky-sea-29087.herokuapp.com/get_a_order/${_id}`)
+    fetch(`http://localhost:9999/get_a_order/${_id}`)
     .then(res=>res.json())
     .then(data=>{
       setUpdateOrder(data[0]);
@@ -35,7 +35,7 @@ const EditOrder = () => {
         //   const updateCourseInfo = {status};
          
         //   console.log(updateCourseInfo);
-        //   fetch(`https://rocky-sea-29087.herokuapp.com/updateStatus/${_id}`, {
+        //   fetch(`http://localhost:9999/updateStatus/${_id}`, {
         //      method: 'PATCH',
         //      headers:{'Content-Type':'application/json'},
         //      body: JSON.stringify(updateCourseInfo)

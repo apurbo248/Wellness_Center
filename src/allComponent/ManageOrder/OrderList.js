@@ -10,7 +10,7 @@ const OrderList = () => {
     const [allOrder, setAllOrder] = useState([]);
   
     useEffect(()=>{
-        fetch(`https://rocky-sea-29087.herokuapp.com/get_all_order`)
+        fetch(`http://localhost:9999/get_all_order`)
         .then(res => res.json())
         .then(data => {
             setAllOrder(data);

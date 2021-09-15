@@ -77,7 +77,7 @@ const{handleSubmit} = useForm();
     formData.append('teacher', info.teacher);
      
    
-    fetch('https://rocky-sea-29087.herokuapp.com/add_course', {
+    fetch('http://localhost:9999/add_course', {
       method: 'POST',
       body: formData
     })
@@ -100,7 +100,7 @@ const{handleSubmit} = useForm();
 
   //For Table data
   useEffect(()=>{
-    fetch(`https://rocky-sea-29087.herokuapp.com/get_all_course`)
+    fetch(`http://localhost:9999/get_all_course`)
     .then(res => res.json())
     .then(data => {
         setAllCourse(data);
@@ -109,7 +109,7 @@ const{handleSubmit} = useForm();
 
     //For get teacher info
     useEffect(()=>{
-      fetch(`https://rocky-sea-29087.herokuapp.com/get_all_teacher`)
+      fetch(`http://localhost:9999/get_all_teacher`)
       .then(res => res.json())
       .then(data => {
           setAllteacher(data);
@@ -118,7 +118,7 @@ const{handleSubmit} = useForm();
   
 
     const deleteCourse=(id)=>{
-      fetch(`https://rocky-sea-29087.herokuapp.com/get_all_course/${id}`,{
+      fetch(`http://localhost:9999/get_all_course/${id}`,{
         method: 'DELETE'
       })
       .then(res=> res.text())
