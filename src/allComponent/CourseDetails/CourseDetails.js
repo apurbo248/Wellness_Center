@@ -8,7 +8,7 @@ const CourseDetails = () => {
     const[courseInfo, setCourseInfo] = useState([]);
 
     useEffect(()=>{
-        fetch(`http://localhost:9999/get_a_course/${_id}`)
+        fetch(`https://rocky-sea-29087.herokuapp.com/get_a_course/${_id}`)
         .then(res=>res.json())
         .then(data=>{
           setCourseInfo(data); 

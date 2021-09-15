@@ -8,7 +8,7 @@ const Courses = () => {
     const [allCourse, setAllCourse] = useState([]);
 
     useEffect(()=>{
-      fetch(`http://localhost:9999/get_all_course`)
+      fetch(`https://rocky-sea-29087.herokuapp.com/get_all_course`)
       .then(res => res.json())
       .then(data => {
         

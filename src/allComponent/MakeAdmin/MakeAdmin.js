@@ -27,7 +27,7 @@ const MakeAdmin = () => {
       const email={
           email:info.email
       }
-    fetch('http://localhost:9999/admin',{
+    fetch('https://rocky-sea-29087.herokuapp.com/admin',{
         method: 'POST',
         headers:{'Content-Type':'application/json'},
         body: JSON.stringify(email)

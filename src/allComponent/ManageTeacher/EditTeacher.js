@@ -29,7 +29,7 @@ const EditTeacher = () => {
       }
 
       useEffect(()=>{
-        fetch(`http://localhost:9999/get_a_teacher/${_id}`)
+        fetch(`https://rocky-sea-29087.herokuapp.com/get_a_teacher/${_id}`)
         .then(res=>res.json())
         .then(data=>{
           setUpdateteacher(data);
@@ -55,7 +55,7 @@ const EditTeacher = () => {
      const updateTeacherInfo = {_id,name,email,level,biography,phone,facebook,instagram,twetter};
     
      console.log(updateTeacherInfo);
-     fetch(`http://localhost:9999/update/${_id}`, {
+     fetch(`https://rocky-sea-29087.herokuapp.com/update/${_id}`, {
         method: 'PATCH',
         headers:{'Content-Type':'application/json'},
         body: JSON.stringify(updateTeacherInfo)

@@ -8,17 +8,16 @@ const SideBar = () => {
 
    console.log(isAdmin);
     useEffect(() => {
-        fetch('http://localhost:9999/Adminornot', {
+        fetch('https://rocky-sea-29087.herokuapp.com/Adminornot', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify({ email: loogedInUser.email})
         })
             .then(res => res.json())
-            .then(data => 
-          {
-  // console.log(data);
+            .then(data =>{
                 setIsAdmin(data);
-                 console.log(isAdmin)
+                console.log(data)
+                
                 }
             );
     }, [loogedInUser.email])
