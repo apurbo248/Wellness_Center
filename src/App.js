@@ -52,39 +52,39 @@ function App() {
         <Route path="/courses">
           <Courses/>
         </Route>
-        <Route path="/manage_courses">
+        <PrivateRoute path="/manage_courses">
           <ManageCourse/>
-        </Route>
-        <Route path="/manage_teacher">
+        </PrivateRoute>
+        <PrivateRoute path="/manage_teacher">
           <ManageTeacher/>
-        </Route>
-        <Route path="/manage_order">
+        </PrivateRoute>
+        <PrivateRoute path="/manage_order">
           <ManageOrder/>
-        </Route>
-        <Route path="/edit_teacher/:_id">
+        </PrivateRoute>
+        <PrivateRoute path="/edit_teacher/:_id">
           <EditTeacher/>
-        </Route>
-        <Route path="/edit_course/:_id">
+        </PrivateRoute>
+        <PrivateRoute path="/edit_course/:_id">
           <EditCourse/>
-        </Route>
-        <Route path="/course_details/:_id">
+        </PrivateRoute>
+        <PrivateRoute path="/course_details/:_id">
           <CourseDetails/>
-        </Route>
-        <Route path="/course/registration/:_id">
+        </PrivateRoute>
+        <PrivateRoute path="/course/registration/:_id">
           <Registration/>
-        </Route>
+        </PrivateRoute>
         <Route path="/review">
           <Review/>
         </Route>
-        <Route path="/add_admin">
+        <PrivateRoute path="/add_admin">
           <MakeAdmin/>
-        </Route>
-        <Route path="/my_order">
+        </PrivateRoute>
+        <PrivateRoute path="/my_order">
           <MyOrder/>
-        </Route>
-        <Route path="/manage_review">
+        </PrivateRoute>
+        <PrivateRoute path="/manage_review">
           <EditReview/>
-        </Route>
+        </PrivateRoute>
         </div>
      
      </div>

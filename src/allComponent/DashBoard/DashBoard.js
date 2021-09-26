@@ -7,7 +7,7 @@ import HeaderPartTwo from '../HeaderSection/HeaderPartTwo';
 
 const DashBoard = () => {
     return (
-        <div class="bg">
+        <div class="">
            <HeaderPartOne></HeaderPartOne>
            <HeaderPartTwo></HeaderPartTwo>
            <Courses></Courses>
