@@ -4,8 +4,8 @@ module.exports = {
   theme: {
     extend: {
       colors:{
-        mainColorLight:"#c7fbcd",
-        mainColorDark:"#01a954",
+        mainColorLight:"#DBCCF5",
+        mainColorDark:"#210D43",
         darkColor:"#222c36",
         gray:"#ffffff",
         gray2:"#DDDDDD",
@@ -25,7 +25,8 @@ module.exports = {
         mmt2:"-14rem",
        mlm:"-2rem",
        mlm2:"-8rem",
-       mlm3:"-2rem"
+       mlm3:"-2rem",
+       tml:"50rem"
       },
       boxShadow:{
         shadow1:" 0 2px 6px -1px rgba(199, 251, 205, 1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",

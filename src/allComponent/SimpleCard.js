@@ -102,7 +102,7 @@ const SimpleCard = () => {
       <CardElement  />
 
      <div class="flex justify-center">
-     <button class="mt-6 bg-mainColorDark px-28 py-2 font-semibold text-xl text-white rounded-lg " type="submit" disabled={!stripe}>
+     <button class="mt-6 bg-mainColorDark md:px-28 px-16 py-2 font-semibold md:text-xl text-white rounded-lg " type="submit" disabled={!stripe}>
       Pay ${courseInfo.price}
       </button>
      </div>

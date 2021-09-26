@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Slider from "react-slick";
-import ex from "../Images/ex.png"
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import { Link } from 'react-router-dom';
@@ -22,7 +21,7 @@ const Courses = () => {
     return (
       <div
         className={className}
-        style={{ ...style, display: "block", background:"#01a954",margin:"210px 40px 0px 0px " ,height:"30px" ,width:"55px",padding:"6px 0 0 18px",fontSize:"40px" ,borderTopLeftRadius:"5px",borderBottomRightRadius:"5px"}}
+        style={{ ...style, display: "block", background:"#210D43",margin:"210px 50px 0px 0px " ,height:"30px" ,width:"55px",padding:"6px 0 0 18px",fontSize:"40px" ,borderTopLeftRadius:"5px",borderBottomRightRadius:"5px"}}
         onClick={onClick}
       />
     );
@@ -33,7 +32,7 @@ const Courses = () => {
     return (
       <div
         className={className}
-        style={{ ...style, display: "block", background:"#01a954",margin:"210px 0px 0px 1040px ",width:"55px",padding:"6px 0 0 18px",height:"30px" ,borderTopRightRadius:"5px",borderBottomLeftRadius:"5px"  }}
+        style={{ ...style, display: "block", background:"#210D43",margin:"210px 0px 0px 1030px ",width:"55px",padding:"6px 0 0 18px",height:"30px" ,borderTopRightRadius:"5px",borderBottomLeftRadius:"5px"  }}
         onClick={onClick}
       />
     );

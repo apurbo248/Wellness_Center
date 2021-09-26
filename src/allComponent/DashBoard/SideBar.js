@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { userContext } from '../../App';
+import firebase from 'firebase'
 
 const SideBar = () => {
     const [loogedInUser, setLoggedInUser] = useContext(userContext);
@@ -8,7 +9,8 @@ const SideBar = () => {
 
    console.log(isAdmin);
     useEffect(() => {
-        fetch('https://rocky-sea-29087.herokuapp.com/Adminornot', {
+       if(loogedInUser.email){
+        fetch('http://localhost:9500/Adminornot', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify({ email: loogedInUser.email})
@@ -20,18 +22,21 @@ const SideBar = () => {
                 
                 }
             );
-    }, [loogedInUser.email])
+       }
+    }, [loogedInUser.email,isAdmin])
+
+   
     return (
 
         
         <div class="">
             <input type="checkbox" id="check"/>
             <label htmlFor="check">     
-            <i class='bx bx-menu ml-2 text-mainColorDark   md:ml-menuML md:mt-menuMT  md:h-16 md:w-16 md:flex md:justify-center md:items-center text-mainColorDark z-40' id="btn"></i>        
-            <i class='bx bx-chevrons-left bx-fade-left  md:mt-10 ' id="cancel"></i>
+            <i class='bx bx-menu  text-mainColorDark   md:ml-10 md:pb-4  md:h-16 md:w-16 md:flex md:justify-center md:items-center text-mainColorDark z-40' id="btn"></i>        
+            <i class='bx bx-x ' id="cancel"></i>
             </label>
 
-           <div className="sidebarMenu ">
+           <div className="sidebarMenu md:pt-20">
                 <ul className="sideUnderList">
                
                 <Link to="/Explore">
@@ -39,7 +44,7 @@ const SideBar = () => {
                       <h5>Explore</h5>
                       </li>
                   </Link>
-               {!isAdmin && <div>
+                { !isAdmin && <div>
                    
                    <Link to="/my_order">
                    <li className="sideList">                    
@@ -51,9 +56,12 @@ const SideBar = () => {
                    <li className="sideList">                    
                        <h5>Review</h5>
                   </li>
-                  </Link>  </div>
- }
-                 {isAdmin && <div>                                                        
+                  </Link> 
+                   </div>
+                    }
+
+
+                 {isAdmin  && <div>                                                        
                  <Link to="/manage_courses">
                  <li className="sideList">                    
                      <h5>Manage Course</h5>
