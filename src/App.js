@@ -67,15 +67,15 @@ function App() {
         <PrivateRoute path="/edit_course/:_id">
           <EditCourse/>
         </PrivateRoute>
-        <PrivateRoute path="/course_details/:_id">
+        <Route path="/course_details/:_id">
           <CourseDetails/>
-        </PrivateRoute>
+        </Route>
         <PrivateRoute path="/course/registration/:_id">
           <Registration/>
         </PrivateRoute>
-        <Route path="/review">
+        <PrivateRoute path="/review">
           <Review/>
-        </Route>
+        </PrivateRoute>
         <PrivateRoute path="/add_admin">
           <MakeAdmin/>
         </PrivateRoute>

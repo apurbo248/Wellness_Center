@@ -57,7 +57,7 @@ const EditCourse = () => {
     
 
       useEffect(()=>{
-        fetch(`https://rocky-sea-29087.herokuapp.com/get_a_course/${_id}`)
+        fetch(`https://localhost:3000//get_a_course/${_id}`)
         .then(res=>res.json())
         .then(data=>{
           setUpdateCourse(data);
@@ -69,7 +69,7 @@ const EditCourse = () => {
     },[_id])
 
     useEffect(()=>{
-        fetch(`https://rocky-sea-29087.herokuapp.com/get_all_teacher`)
+        fetch(`https://localhost:3000//get_all_teacher`)
         .then(res => res.json())
         .then(data => {
             setAllteacher(data);
@@ -95,7 +95,7 @@ const EditCourse = () => {
      const updateCourseInfo = {_id,name,totalDay,days,address,introduction ,openDate, nextDate,from,to,level,teacher};
     
      console.log(updateCourseInfo);
-     fetch(`https://rocky-sea-29087.herokuapp.com/update/${_id}`, {
+     fetch(`https://localhost:3000//update/${_id}`, {
         method: 'PATCH',
         headers:{'Content-Type':'application/json'},
         body: JSON.stringify(updateCourseInfo)

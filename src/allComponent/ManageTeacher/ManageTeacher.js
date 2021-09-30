@@ -47,7 +47,7 @@ const ManageTeacher = () => {
     formData.append('twetter', info.twetter);
      
    
-    fetch('https://rocky-sea-29087.herokuapp.com/add_teacher', {
+    fetch('https://localhost:3000//add_teacher', {
       method: 'POST',
       body: formData
     })
@@ -68,7 +68,7 @@ const ManageTeacher = () => {
 
   //For Table data
   useEffect(()=>{
-    fetch(`https://rocky-sea-29087.herokuapp.com/get_all_teacher`)
+    fetch(`https://localhost:3000//get_all_teacher`)
     .then(res => res.json())
     .then(data => {
         setAllteacher(data);
@@ -79,7 +79,7 @@ const ManageTeacher = () => {
 
     //For delete...
     const deleteTeacherInfo=(id)=>{
-      fetch(`https://rocky-sea-29087.herokuapp.com/get_all_teacher/${id}`,{
+      fetch(`https://localhost:3000//get_all_teacher/${id}`,{
         method: 'DELETE'
       })
       .then(res=> res.text())

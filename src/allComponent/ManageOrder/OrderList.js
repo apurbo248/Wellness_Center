@@ -9,7 +9,7 @@ const OrderList = () => {
     const [orders, setOrders] = useState([]);
 
     useEffect(()=>{
-        fetch(`https://rocky-sea-29087.herokuapp.com/get_all_order`)
+        fetch(`https://localhost:3000//get_all_order`)
         .then(res => res.json())
         .then(data => {
             setAllOrder(data);           
@@ -30,7 +30,7 @@ const OrderList = () => {
             const modifiedStatus = { id, status }
             console.log(modifiedStatus)
     
-           fetch(`https://rocky-sea-29087.herokuapp.com/updateStatus/${id}`, {
+           fetch(`https://localhost:3000//updateStatus/${id}`, {
             method: 'PATCH',
             headers:{'Content-Type':'application/json'},
             body: JSON.stringify(modifiedStatus)
@@ -57,7 +57,7 @@ const OrderList = () => {
              
 
         const deleteOrder=(id)=>{
-            fetch(`https://rocky-sea-29087.herokuapp.com/get_all_order/${id}`,{
+            fetch(`https://localhost:3000//get_all_order/${id}`,{
               method: 'DELETE'
             })
             .then(res=> res.text())

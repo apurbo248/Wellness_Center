@@ -5,7 +5,7 @@ const MyOrder = () => {
     const [loogedInUser, setLoggedInUser] = useContext(userContext);
         const [orderlist, setOrderList]= useState([]);
         useEffect(()=>{
-            fetch(`https://rocky-sea-29087.herokuapp.com/get_a_order_by_email?email=${loogedInUser.email}`)
+            fetch(`https://localhost:3000//get_a_order_by_email?email=${loogedInUser.email}`)
             .then(res=>res.json())
             .then(data=>{
             console.log(data)

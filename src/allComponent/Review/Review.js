@@ -31,7 +31,7 @@ const Review = () => {
           review:info.review
 
       }
-    fetch('https://rocky-sea-29087.herokuapp.com/review',{
+    fetch('https://localhost:3000//review',{
         method: 'POST',
         headers:{'Content-Type':'application/json'},
         body: JSON.stringify(information)

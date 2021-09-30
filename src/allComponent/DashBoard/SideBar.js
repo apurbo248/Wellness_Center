@@ -10,7 +10,7 @@ const SideBar = () => {
    console.log(isAdmin);
     useEffect(() => {
        if(loogedInUser.email){
-        fetch('https://rocky-sea-29087.herokuapp.com/Adminornot', {
+        fetch('https://localhost:3000//Adminornot', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify({ email: loogedInUser.email})
